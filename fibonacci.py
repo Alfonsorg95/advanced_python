@@ -33,7 +33,10 @@ class FiboIter():
 
 if __name__ == '__main__':
     maximum = input("Add the maximum number for this fibonacci series: ")
-    fibonacci = FiboIter(int(maximum))
+    if not maximum:
+        fibonacci = FiboIter()
+    else:
+        fibonacci = FiboIter(int(maximum))
     for element in fibonacci:
         print(element)
         time.sleep(1)
